@@ -1,9 +1,10 @@
 import React from 'react';
+import '../menu-item/menu-item.styles.scss';
 
-const MenuItem = ({title})=>(
+const MenuItem = ({title,imageUrl})=>(
     <div className="menu-item">
         <div className="content">
-            <div className='title'>{title}}</div>
+            <div className='title'>{title}</div>
            <span className='subtitle'>SHOP NOW</span>
         </div>
      </div> 
