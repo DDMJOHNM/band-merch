@@ -10,24 +10,28 @@ class Directory extends React.Component{
            sections: [
                {
                     title: 'Mens',
-                    imageUrl:'',
+                    imageUrl:'https://cdn.shopify.com/s/files/1/2244/7843/products/DRAB_MAJESTY-Modern_Mirror-LS-F_2000x.jpg?v=1565000145',
                     id:1,
+                    
                 },{
-                    title: 'Mens',
-                    imageUrl:'',
+                    title: 'Hats',
+                    imageUrl:'https://cdn.shopify.com/s/files/1/2244/7843/products/DRAB_MAJESTY-Modern_Mirror-LS-F_2000x.jpg?v=1565000145',
                     id:2,
+                    linkUrl :'hats',
                },{
                     title: 'Mens',
-                    imageUrl:'',
+                    imageUrl:'https://cdn.shopify.com/s/files/1/2244/7843/products/DRAB_MAJESTY-Modern_Mirror-LS-F_2000x.jpg?v=1565000145',
                     id:3,
                 },{
                     title: 'Mens',
-                    imageUrl:'',
+                    imageUrl:'https://cdn.shopify.com/s/files/1/2244/7843/products/DRAB_MAJESTY-Modern_Mirror-LS-F_2000x.jpg?v=1565000145',
                     id:4,
+                    size:'large',                    
                 },{
                     title: 'Mens',
-                    imageUrl:'',
+                    imageUrl:'https://cdn.shopify.com/s/files/1/2244/7843/products/DRAB_MAJESTY-Modern_Mirror-LS-F_2000x.jpg?v=1565000145',
                     id:5,
+                    size:'large',
                 }               
              ]            
         }
@@ -36,8 +40,8 @@ class Directory extends React.Component{
     render(){
         return(
             <div className='directory-menu'>
-                {this.state.sections.map(({title, imageUrl,id})=>(
-                    <MenuItem key={id} title={title} imageUrl={imageUrl} />
+                {this.state.sections.map(({id,...otherSectionProps})=>(
+                    <MenuItem key={id} {...otherSectionProps} />
                 ))}
             </div>
         )
